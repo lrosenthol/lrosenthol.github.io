@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonard Rosenthol</title>
+  <meta name="description" content="Leonard Rosenthol — PDF Architect, Content Provenance Architect, and International Standards Expert." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text:    #1a1a1a;
+      --muted:   #555;
+      --accent:  #0057b8;
+      --accent-hover: #003d82;
+      --border:  #e2e2e2;
+      --bg:      #ffffff;
+      --tag-bg:  #f0f4fa;
+      --tag-text:#0057b8;
+      --max-w:   760px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      padding: 3rem 1.25rem 5rem;
+    }
+
+    .container { max-width: var(--max-w); margin: 0 auto; }
+
+    /* ── Header ── */
+    header { margin-bottom: 3rem; }
+    header h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.5px; }
+    header p.tagline {
+      margin-top: 0.5rem;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .social-links a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* ── About ── */
+    .about {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .about p { color: var(--muted); }
+    .about p + p { margin-top: 0.75rem; }
+
+    /* ── Section ── */
+    section { margin-bottom: 3rem; }
+    section h2 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Card list ── */
+    .card-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .card-list li a {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      text-decoration: none;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .card-list li a:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,87,184,0.08);
+    }
+    .card-meta { flex: 1; }
+    .card-title { font-size: 0.95rem; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .card-sub   { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+    .card-tag {
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      align-self: flex-start;
+      margin-top: 0.1rem;
+    }
+    .card-tag.video   { background: #fff0f0; color: #c0392b; }
+    .card-tag.talk    { background: #f0fff4; color: #1a7a3c; }
+    .card-tag.article { background: #f0f4fa; color: #0057b8; }
+    .card-tag.profile { background: #fdf6e3; color: #856404; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #bbb;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 1.75rem; }
+      .card-list li a { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Leonard Rosenthol</h1>
+    <p class="tagline">PDF Architect &middot; Content Provenance Architect &middot; International Standards Expert</p>
+    <nav class="social-links" aria-label="Profiles">
+      <a href="https://www.linkedin.com/in/lrosenthol" target="_blank" rel="noopener">
+        <!-- LinkedIn -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/lrosenthol" target="_blank" rel="noopener">
+        <!-- GitHub -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3A12 12 0 0 0 0 12.3c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.3.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.6-2.8 5.63-5.48 5.92.42.36.8 1.1.8 2.22v3.3c0 .3.2.67.82.56A12 12 0 0 0 24 12.3 12 12 0 0 0 12 .3z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.youtube.com/c/LeonardRosenthol" target="_blank" rel="noopener">
+        <!-- YouTube -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2s-.23-1.65-.95-2.37c-.9-.95-1.92-.96-2.38-1.02C17.1 2.6 12 2.6 12 2.6s-5.1 0-8.17.22c-.47.06-1.48.07-2.38 1.02C.73 4.56.5 6.2.5 6.2S.27 8.1.27 10v1.8c0 1.9.23 3.78.23 3.78s.23 1.65.95 2.37c.9.95 2.1.92 2.63 1.02C5.9 19.2 12 19.2 12 19.2s5.1 0 8.17-.24c.47-.06 1.48-.07 2.38-1.02.72-.72.95-2.37.95-2.37s.23-1.88.23-3.78V10c0-1.9-.23-3.8-.23-3.8zM9.73 13.8V7.64l6.44 3.1-6.44 3.07z"/></svg>
+        YouTube
+      </a>
+      <a href="https://pdfa.org/people/leonard-rosenthol/" target="_blank" rel="noopener">PDF Association</a>
+      <a href="https://c2pa.org" target="_blank" rel="noopener">C2PA</a>
+    </nav>
+  </header>
+
+  <div class="about">
+    <p>Senior Principal Architect for PDF &amp; the Document Cloud at Adobe, with over 20 years of experience shaping the PDF standard. Project Editor at ISO for PDF/A, PDF/X, and PDF/E, and author of the PDF Electronic Signature standard (PAdES) at ETSI/ESI.</p>
+    <p>Co-founder and Chair of the Technical Working Group for the <a href="https://c2pa.org" style="color:var(--accent)">Coalition for Content Provenance and Authenticity (C2PA)</a>, which created the industry's first open standard for verifying the origin and history of digital content. Board member of the <a href="https://pdfa.org" style="color:var(--accent)">PDF Association</a>.</p>
+  </div>
+
+  <!-- Videos -->
+  <section aria-labelledby="videos-heading">
+    <h2 id="videos-heading">Videos &amp; Talks</h2>
+    <ul class="card-list">
+      <li>
+        <a href="https://www.youtube.com/watch?v=enrVusa_eyI" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">CAI Symposium: C2PA Primer</div>
+            <div class="card-sub">Content Authenticity Initiative &middot; 2024</div>
+          </div>
+          <span class="card-tag video">Video</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=tQDTvzjr5CQ" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Introduction to Content Credentials</div>
+            <div class="card-sub">Adobe / C2PA &middot; 2024</div>
+          </div>
+          <span class="card-tag video">Video</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=KkeoVMrj2Ww" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">LF Live Webinar: Introduction to C2PA</div>
+            <div class="card-sub">Linux Foundation &middot; 2023</div>
+          </div>
+          <span class="card-tag video">Video</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=5Af3IC5WxPo" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Keynote: PDF in a Multi-Device World</div>
+            <div class="card-sub">PDF Association</div>
+          </div>
+          <span class="card-tag video">Video</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://lfms24.sched.com/event/9f86449efe7c7147d8be7285fc05410c" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Keynote: Linux Foundation Member Summit 2024</div>
+            <div class="card-sub">Linux Foundation Member Summit &middot; 2024</div>
+          </div>
+          <span class="card-tag talk">Talk</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Articles -->
+  <section aria-labelledby="articles-heading">
+    <h2 id="articles-heading">Articles &amp; Presentations</h2>
+    <ul class="card-list">
+      <li>
+        <a href="https://pdfa.org/presentation/collaborative-pdf/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Collaborative PDF</div>
+            <div class="card-sub">PDF Association &middot; May 2025</div>
+          </div>
+          <span class="card-tag article">Article</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pdfa.org/presentation/content-authenticity-and-pdf/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Content Authenticity and PDF</div>
+            <div class="card-sub">PDF Association &middot; 2021</div>
+          </div>
+          <span class="card-tag article">Article</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pdfa.org/overhauling-pdf-forms-technology/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Overhauling PDF Forms Technology</div>
+            <div class="card-sub">PDF Association &middot; 2021</div>
+          </div>
+          <span class="card-tag article">Article</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholarlykitchen.sspnet.org/2025/03/13/research-integrity-content-provenance-and-c2pa/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Research Integrity, Image Manipulation, Content Provenance and the C2PA</div>
+            <div class="card-sub">The Scholarly Kitchen &middot; March 2025</div>
+          </div>
+          <span class="card-tag article">Article</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://contentauthenticity.org/blog/exploring-the-open-standard-for-content-provenance-the-c2pa-draft-specification-and-the-path-to-adoption" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">Exploring the Open Standard for Content Provenance: The C2PA Draft Specification</div>
+            <div class="card-sub">Content Authenticity Initiative</div>
+          </div>
+          <span class="card-tag article">Article</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Profiles -->
+  <section aria-labelledby="profiles-heading">
+    <h2 id="profiles-heading">Profiles &amp; Organizations</h2>
+    <ul class="card-list">
+      <li>
+        <a href="https://pdfa.org/people/leonard-rosenthol/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">PDF Association — Board Member &amp; Working Group Chair</div>
+            <div class="card-sub">Imaging Model TWG · PDF Forms TWG · PDF/A TWG</div>
+          </div>
+          <span class="card-tag profile">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://aiforgood.itu.int/speaker/leonard-rosenthol/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">AI for Good — ITU Speaker</div>
+            <div class="card-sub">International Telecommunication Union</div>
+          </div>
+          <span class="card-tag profile">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://copyrightsociety.org/bio/leonard-rosenthal/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">The Copyright Society</div>
+            <div class="card-sub">Member profile</div>
+          </div>
+          <span class="card-tag profile">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.niso.org/people/leonard-rosenthol" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">NISO — National Information Standards Organization</div>
+            <div class="card-sub">Member profile</div>
+          </div>
+          <span class="card-tag profile">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://creativeproweek.com/speaker/leonard-rosenthol/" target="_blank" rel="noopener">
+          <div class="card-meta">
+            <div class="card-title">CreativePro Week — Speaker</div>
+            <div class="card-sub">CreativePro Week conference</div>
+          </div>
+          <span class="card-tag profile">Profile</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Leonard Rosenthol &middot; <a href="mailto:leonardr@lazerware.com" style="color:inherit">leonardr@lazerware.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
